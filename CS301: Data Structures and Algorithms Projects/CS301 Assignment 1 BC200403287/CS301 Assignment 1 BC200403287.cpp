@@ -25,6 +25,7 @@ class Student{
 	{
     return name;
     }
+
         
 	void setMarks(int setm)
 	{
