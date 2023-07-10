@@ -1,0 +1,64 @@
+<!-- Name: Abdul Rehman
+     VU-ID: BC220424444 -->
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>CS202 Assignment 2</title>
+      
+      <style>
+         body{
+         background-color: aqua;
+         }
+      </style>
+
+   </head>
+   <body>
+      <h2>Introduction to Front End Development</h2>
+      <p id="fPara">Please click on the below button to read introduction to Front End Dvelopment</p><br>
+      <button id="read_btn">Read Instruction</button><br><br><br>
+      
+      <p id="sPara" style="display: none;">This course starts with describing front-end development on the web. Build foundations on HTML, CSS, and JavaScript and cover advanced topics based on current trends in HTML5, CSS3, Responsive Design, and some of its frameworks like Bootstrap.
+         <br><br>
+         The focus is to learn while solving different problems and doing many real-life case studies.
+         <br><br>
+         <span style="margin-left: 40px;">Following tools are used to develop front end interface of a website:</span>
+      </p>
+
+      <!-- Unordered List Items -->
+      <ul id="list" style="display: none; margin-top: -15px;">
+         <li>HTML</li>
+         <li>CSS</li>
+         <li>JavaScript</li>
+      </ul>
+      <br><br>
+      
+      <button id="item_btn">Add List Item</button><br>
+      <p id="tPara" style="margin-top: 0;">Click on the add 'Add List Item' button to view JavaScript libraries.</p>
+
+      <!-- Starting JavaScript Section -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      
+      <!-- Read Instruction Button customizations using JS and JQuery, we will use JQuery features and effects-->
+      <script>
+         $(document).ready(function(){
+             $("#read_btn").click(function(){
+                 $(this).css("background-color", "green");     // change color to green when click
+                 $("#fPara").hide();      // this para will be hidden
+                 $("#sPara").show();      // this para will be shown
+                 $("#list").show();       // this para will be shown
+             });
+         
+         // Add List Item Button customization using JS and JQuery
+         $("#item_btn").click(function(){    // this will make button clickable
+             $("#list").append('<li>Ajax</li><li>JQuery</li>');
+             $(this).prop('disabled', true);
+             $("#tPara").hide();
+             });
+         });
+      </script>
+
+   </body>
+</html>
